@@ -1,0 +1,12 @@
+function factorial(n) -> if n <= 1 then 1 else n * factorial(n - 1);
+
+let i = 0;
+while i < 4 do
+begin
+    print("~: ~\n", i, factorial(i));
+    i <- i + 1;
+end
+// > 0: 1
+// > 1: 1
+// > 2: 2
+// > 3: 6

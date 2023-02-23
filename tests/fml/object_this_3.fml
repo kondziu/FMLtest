@@ -1,0 +1,13 @@
+let e = object
+extends 6
+begin
+    function increment() -> begin
+        this <- this + 1;
+        print("~\n", this);
+    end
+end;
+
+// > 7
+e.increment();
+// > object(..=6, increment=function)
+print("~\n", e);
