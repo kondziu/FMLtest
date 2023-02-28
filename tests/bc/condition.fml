@@ -1,0 +1,7 @@
+// > correct
+if true then print("correct\n")
+else print("incorrect\n");
+
+// > correct
+if false then print("incorrect\n")
+else print("correct\n");
