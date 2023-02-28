@@ -1,12 +1,12 @@
 Constant Pool:
     0: null
-    1: 3
-    2: "a"
-    3: 2
-    4: "b"
-    5: 1
-    6: "c"
-    7: Class(#2="a", #4="b", #6="c")
+    1: "a"
+    2: 3
+    3: "b"
+    4: 2
+    5: "c"
+    6: 1
+    7: Class(#1="a", #3="b", #5="c")
     8: "~\n"
     9: "obj.a=~\n"
    10: "obj.b=~\n"
@@ -16,9 +16,9 @@ Constant Pool:
    14: 666
    15: Function(params: 1, locals: 1, length: 102)
                  0: constant #0=null
-                 3: constant #1=3
-                 6: constant #3=2
-                 9: constant #5=1
+                 3: constant #2=3
+                 6: constant #4=2
+                 9: constant #6=1
                 12: object #7
                 15: set local 1
                 18: drop
@@ -26,30 +26,30 @@ Constant Pool:
                 22: print #8="~\n" 1
                 26: drop
                 27: get local 1
-                30: get field #2="a"
+                30: get field #1="a"
                 33: print #9="obj.a=~\n" 1
                 37: drop
                 38: get local 1
-                41: get field #4="b"
+                41: get field #3="b"
                 44: print #10="obj.b=~\n" 1
                 48: drop
                 49: get local 1
-                52: get field #6="c"
+                52: get field #5="c"
                 55: print #11="obj.c=~\n" 1
                 59: drop
                 60: get local 1
                 63: constant #12=42
-                66: set field #2="a"
+                66: set field #1="a"
                 69: print #9="obj.a=~\n" 1
                 73: drop
                 74: get local 1
                 77: constant #13=13
-                80: set field #4="b"
+                80: set field #3="b"
                 83: print #10="obj.b=~\n" 1
                 87: drop
                 88: get local 1
                 91: constant #14=666
-                94: set field #6="c"
+                94: set field #5="c"
                 97: print #11="obj.c=~\n" 1
                101: return
 Entry: #15

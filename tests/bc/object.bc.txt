@@ -2,18 +2,18 @@ Constant Pool:
     0: null
     1: Class()
     2: "~\n"
-    3: 1
-    4: "x"
-    5: 2
-    6: "y"
-    7: Class(#4="x", #6="y")
+    3: "x"
+    4: 1
+    5: "y"
+    6: 2
+    7: Class(#3="x", #5="y")
     8: Class()
-    9: Class(#4="x", #6="y")
-   10: Function(params: 1, locals: 0, length: 4)
+    9: Class(#3="x", #5="y")
+   10: "self"
+   11: Function(params: 1, locals: 0, length: 4)
                  0: get local 0
                  3: return
-   11: "self"
-   12: Class(#11="self")
+   12: Class(#10="self")
    13: Class()
    14: 3
    15: "z"
@@ -21,27 +21,27 @@ Constant Pool:
                  0: get local 0
                  3: return
    17: 4
-   18: Class(#4="x", #15="z", #11="self", #6="y")
+   18: Class(#3="x", #15="z", #10="self", #5="y")
    19: Function(params: 1, locals: 2, length: 102)
                  0: constant #0=null
                  3: object #1
                  6: print #2="~\n" 1
                 10: drop
                 11: constant #0=null
-                14: constant #3=1
-                17: constant #5=2
+                14: constant #4=1
+                17: constant #6=2
                 20: object #7
                 23: print #2="~\n" 1
                 27: drop
                 28: constant #0=null
                 31: object #8
-                34: constant #3=1
-                37: constant #5=2
+                34: constant #4=1
+                37: constant #6=2
                 40: object #9
                 43: print #2="~\n" 1
                 47: drop
                 48: constant #0=null
-                51: function #10
+                51: function #11
                 54: object #12
                 57: set local 1
                 60: drop
@@ -51,7 +51,7 @@ Constant Pool:
                 69: constant #0=null
                 72: object #13
                 75: constant #14=3
-                78: constant #5=2
+                78: constant #6=2
                 81: function #16
                 84: constant #17=4
                 87: object #18

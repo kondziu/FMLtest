@@ -52,7 +52,7 @@ Constant Pool:
                 35: print #8="~\n" 1
                 39: return
 Entry: #9
-Globals: #5="decide", #1="invert"
+Globals: #1="invert", #5="decide"
 
 // > decide(true)
 // > invert(true)

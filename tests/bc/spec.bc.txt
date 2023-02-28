@@ -79,18 +79,18 @@ Constant Pool:
    66: Class()
    67: Class()
    68: "z"
-   69: "x=~, y=~, z=~\n"
-   70: Function(params: 1, locals: 0, length: 23)
+   69: "print_obj"
+   70: "x=~, y=~, z=~\n"
+   71: Function(params: 1, locals: 0, length: 23)
                  0: get local 0
                  3: get field #33="x"
                  6: get local 0
                  9: get field #34="y"
                 12: get local 0
                 15: get field #68="z"
-                18: print #69="x=~, y=~, z=~\n" 3
+                18: print #70="x=~, y=~, z=~\n" 3
                 22: return
-   71: "print_obj"
-   72: Class(#33="x", #34="y", #68="z", #71="print_obj")
+   72: Class(#33="x", #34="y", #68="z", #69="print_obj")
    73: "point"
    74: "inner"
    75: "new"
@@ -182,7 +182,7 @@ Constant Pool:
    99: "math_array"
   100: "arr1"
   101: "arr2"
-  102: Function(params: 1, locals: 8, length: 1476)
+  102: Function(params: 1, locals: 10, length: 1484)
                  0: constant #0=5
                  3: constant #1=7
                  6: call method #2="+" 2
@@ -402,10 +402,10 @@ Constant Pool:
                595: branch +3=601
                598: jump +9=610
                601: constant #14=true
-               604: set global #43="y_"
+               604: set local 5
                607: jump +6=616
                610: constant #14=true
-               613: set global #44="z_"
+               613: set local 6
                616: drop
                617: get global #42="x_"
                620: print #3="~\n" 1
@@ -413,315 +413,318 @@ Constant Pool:
                625: get global #43="y_"
                628: print #3="~\n" 1
                632: drop
-               633: constant #39=0
-               636: set global #45="i"
-               639: drop
-               640: constant #18=null
-               643: get global #45="i"
-               646: constant #46=10
-               649: call method #10="<" 2
-               653: branch +3=659
-               656: jump +25=684
-               659: drop
-               660: get global #45="i"
-               663: print #3="~\n" 1
+               633: get global #44="z_"
+               636: print #3="~\n" 1
+               640: drop
+               641: constant #39=0
+               644: set global #45="i"
+               647: drop
+               648: constant #18=null
+               651: get global #45="i"
+               654: constant #46=10
+               657: call method #10="<" 2
+               661: branch +3=667
+               664: jump +25=692
                667: drop
                668: get global #45="i"
-               671: constant #20=1
-               674: call method #2="+" 2
-               678: set global #45="i"
-               681: jump -41=643
-               684: drop
-               685: function #47
-               688: set global #48="f"
-               691: drop
-               692: get global #48="f"
-               695: constant #21=2
-               698: constant #20=1
-               701: call function 2
-               703: set global #49="e"
-               706: drop
-               707: get global #49="e"
-               710: print #3="~\n" 1
+               671: print #3="~\n" 1
+               675: drop
+               676: get global #45="i"
+               679: constant #20=1
+               682: call method #2="+" 2
+               686: set global #45="i"
+               689: jump -41=651
+               692: drop
+               693: function #47
+               696: set global #48="f"
+               699: drop
+               700: get global #48="f"
+               703: constant #21=2
+               706: constant #20=1
+               709: call function 2
+               711: set global #49="e"
                714: drop
-               715: constant #1=7
-               718: constant #18=null
-               721: array
-               722: print #3="~\n" 1
-               726: drop
-               727: constant #1=7
-               730: set global #50="size"
-               733: constant #18=null
-               736: array
-               737: drop
-               738: get global #50="size"
-               741: print #51="size: ~\n" 1
+               715: get global #49="e"
+               718: print #3="~\n" 1
+               722: drop
+               723: constant #1=7
+               726: constant #18=null
+               729: array
+               730: print #3="~\n" 1
+               734: drop
+               735: constant #1=7
+               738: set global #50="size"
+               741: constant #18=null
+               744: array
                745: drop
-               746: constant #20=1
-               749: set global #52="j"
-               752: drop
-               753: constant #39=0
-               756: set local 6
-               759: drop
-               760: constant #46=10
-               763: set local 5
-               766: constant #18=null
-               769: array
-               770: set local 7
-               773: get local 6
-               776: get local 5
-               779: call method #10="<" 2
-               783: branch +3=789
-               786: jump +52=841
-               789: get local 6
-               792: get global #52="j"
-               795: set local 8
-               798: drop
-               799: get global #52="j"
-               802: constant #20=1
-               805: call method #2="+" 2
-               809: set global #52="j"
-               812: drop
-               813: get local 8
-               816: call method #53="set" 3
+               746: get global #50="size"
+               749: print #51="size: ~\n" 1
+               753: drop
+               754: constant #20=1
+               757: set global #52="j"
+               760: drop
+               761: constant #39=0
+               764: set local 8
+               767: drop
+               768: constant #46=10
+               771: set local 7
+               774: constant #18=null
+               777: array
+               778: set local 9
+               781: get local 8
+               784: get local 7
+               787: call method #10="<" 2
+               791: branch +3=797
+               794: jump +52=849
+               797: get local 8
+               800: get global #52="j"
+               803: set local 10
+               806: drop
+               807: get global #52="j"
+               810: constant #20=1
+               813: call method #2="+" 2
+               817: set global #52="j"
                820: drop
-               821: get local 6
-               824: constant #20=1
-               827: call method #2="+" 2
-               831: set local 6
-               834: drop
-               835: get local 7
-               838: jump -68=773
-               841: set global #54="a"
-               844: drop
-               845: get global #54="a"
-               848: print #3="~\n" 1
+               821: get local 10
+               824: call method #53="set" 3
+               828: drop
+               829: get local 8
+               832: constant #20=1
+               835: call method #2="+" 2
+               839: set local 8
+               842: drop
+               843: get local 9
+               846: jump -68=781
+               849: set global #54="a"
                852: drop
                853: get global #54="a"
-               856: constant #39=0
-               859: call method #55="get" 2
-               863: get global #54="a"
-               866: constant #56=9
-               869: call method #55="get" 2
-               873: print #57="~..~\n" 2
-               877: drop
-               878: get global #54="a"
-               881: constant #0=5
-               884: constant #58=-1
-               887: call method #53="set" 3
-               891: drop
-               892: get global #54="a"
-               895: print #3="~\n" 1
+               856: print #3="~\n" 1
+               860: drop
+               861: get global #54="a"
+               864: constant #39=0
+               867: call method #55="get" 2
+               871: get global #54="a"
+               874: constant #56=9
+               877: call method #55="get" 2
+               881: print #57="~..~\n" 2
+               885: drop
+               886: get global #54="a"
+               889: constant #0=5
+               892: constant #58=-1
+               895: call method #53="set" 3
                899: drop
-               900: constant #22=3
-               903: constant #18=null
-               906: array
-               907: set global #59="b"
-               910: drop
-               911: get global #59="b"
-               914: set global #60="c"
-               917: drop
-               918: get global #60="c"
-               921: constant #20=1
-               924: constant #61=-42
-               927: call method #53="set" 3
-               931: drop
-               932: get global #59="b"
-               935: print #3="~\n" 1
+               900: get global #54="a"
+               903: print #3="~\n" 1
+               907: drop
+               908: constant #22=3
+               911: constant #18=null
+               914: array
+               915: set global #59="b"
+               918: drop
+               919: get global #59="b"
+               922: set global #60="c"
+               925: drop
+               926: get global #60="c"
+               929: constant #20=1
+               932: constant #61=-42
+               935: call method #53="set" 3
                939: drop
-               940: get global #60="c"
+               940: get global #59="b"
                943: print #3="~\n" 1
                947: drop
-               948: function #62
-               951: set global #63="fa"
-               954: drop
-               955: constant #22=3
-               958: constant #18=null
-               961: array
-               962: set global #64="d"
-               965: drop
-               966: get global #63="fa"
-               969: get global #64="d"
-               972: call function 1
-               974: drop
-               975: get global #64="d"
-               978: print #3="~\n" 1
+               948: get global #60="c"
+               951: print #3="~\n" 1
+               955: drop
+               956: function #62
+               959: set global #63="fa"
+               962: drop
+               963: constant #22=3
+               966: constant #18=null
+               969: array
+               970: set global #64="d"
+               973: drop
+               974: get global #63="fa"
+               977: get global #64="d"
+               980: call function 1
                982: drop
-               983: constant #18=null
-               986: object #65
-               989: print #3="~\n" 1
-               993: drop
-               994: constant #18=null
-               997: object #66
-              1000: print #3="~\n" 1
-              1004: drop
-              1005: constant #20=1
-              1008: object #67
-              1011: print #3="~\n" 1
-              1015: drop
-              1016: constant #18=null
-              1019: constant #39=0
-              1022: constant #20=1
-              1025: constant #21=2
-              1028: function #70
-              1031: object #72
-              1034: set global #73="point"
-              1037: drop
-              1038: get global #73="point"
-              1041: print #3="~\n" 1
+               983: get global #64="d"
+               986: print #3="~\n" 1
+               990: drop
+               991: constant #18=null
+               994: object #65
+               997: print #3="~\n" 1
+              1001: drop
+              1002: constant #18=null
+              1005: object #66
+              1008: print #3="~\n" 1
+              1012: drop
+              1013: constant #20=1
+              1016: object #67
+              1019: print #3="~\n" 1
+              1023: drop
+              1024: constant #18=null
+              1027: constant #39=0
+              1030: constant #20=1
+              1033: constant #21=2
+              1036: function #71
+              1039: object #72
+              1042: set global #73="point"
               1045: drop
               1046: get global #73="point"
-              1049: get field #33="x"
-              1052: get global #73="point"
-              1055: get field #34="y"
-              1058: get global #73="point"
-              1061: get field #68="z"
-              1064: print #69="x=~, y=~, z=~\n" 3
-              1068: drop
-              1069: get global #73="point"
-              1072: call method #71="print_obj" 1
+              1049: print #3="~\n" 1
+              1053: drop
+              1054: get global #73="point"
+              1057: get field #33="x"
+              1060: get global #73="point"
+              1063: get field #34="y"
+              1066: get global #73="point"
+              1069: get field #68="z"
+              1072: print #70="x=~, y=~, z=~\n" 3
               1076: drop
-              1077: function #78
-              1080: set global #75="new"
-              1083: drop
-              1084: get global #75="new"
-              1087: constant #20=1
-              1090: call function 1
-              1092: set global #79="left"
-              1095: drop
-              1096: get global #75="new"
-              1099: constant #21=2
-              1102: call function 1
-              1104: set global #80="right"
-              1107: drop
-              1108: get global #79="left"
-              1111: get global #80="right"
-              1114: call method #2="+" 2
-              1118: set global #81="result"
-              1121: drop
-              1122: get global #81="result"
-              1125: print #3="~\n" 1
+              1077: get global #73="point"
+              1080: call method #69="print_obj" 1
+              1084: drop
+              1085: function #78
+              1088: set global #75="new"
+              1091: drop
+              1092: get global #75="new"
+              1095: constant #20=1
+              1098: call function 1
+              1100: set global #79="left"
+              1103: drop
+              1104: get global #75="new"
+              1107: constant #21=2
+              1110: call function 1
+              1112: set global #80="right"
+              1115: drop
+              1116: get global #79="left"
+              1119: get global #80="right"
+              1122: call method #2="+" 2
+              1126: set global #81="result"
               1129: drop
-              1130: get global #79="left"
-              1133: get global #80="right"
-              1136: call method #2="+" 2
-              1140: print #3="~\n" 1
-              1144: drop
-              1145: constant #15=false
-              1148: constant #21=2
-              1151: constant #21=2
-              1154: call method #5="*" 2
-              1158: constant #21=2
-              1161: constant #21=2
-              1164: call method #6="/" 2
-              1168: call method #2="+" 2
-              1172: constant #82=8
-              1175: constant #22=3
-              1178: call method #4="-" 2
-              1182: call method #12="==" 2
-              1186: constant #14=true
-              1189: call method #16="&" 2
-              1193: call method #17="|" 2
-              1197: print #3="~\n" 1
-              1201: drop
-              1202: constant #15=false
-              1205: constant #21=2
-              1208: constant #21=2
-              1211: call method #5="*" 2
-              1215: constant #21=2
-              1218: constant #21=2
-              1221: call method #6="/" 2
-              1225: call method #2="+" 2
-              1229: constant #82=8
-              1232: constant #22=3
-              1235: call method #4="-" 2
-              1239: call method #12="==" 2
-              1243: constant #14=true
-              1246: call method #16="&" 2
-              1250: call method #17="|" 2
-              1254: print #3="~\n" 1
-              1258: drop
-              1259: constant #20=1
-              1262: constant #18=null
-              1265: array
-              1266: set global #83="arr"
-              1269: drop
-              1270: get global #83="arr"
-              1273: constant #39=0
-              1276: constant #14=true
-              1279: call method #53="set" 3
-              1283: drop
-              1284: get global #83="arr"
-              1287: constant #39=0
-              1290: call method #55="get" 2
-              1294: print #3="~\n" 1
-              1298: drop
-              1299: get global #83="arr"
-              1302: constant #39=0
-              1305: constant #15=false
-              1308: call method #53="set" 3
-              1312: drop
-              1313: get global #83="arr"
-              1316: constant #39=0
-              1319: call method #55="get" 2
-              1323: drop
-              1324: get global #83="arr"
-              1327: constant #39=0
-              1330: call method #55="get" 2
-              1334: print #3="~\n" 1
-              1338: drop
-              1339: constant #20=1
-              1342: object #84
-              1345: set global #85="pseudo_one"
-              1348: drop
-              1349: constant #21=2
-              1352: object #86
-              1355: set global #87="pseudo_two"
-              1358: drop
-              1359: constant #20=1
-              1362: constant #21=2
-              1365: call method #2="+" 2
-              1369: print #3="~\n" 1
-              1373: drop
-              1374: function #91
-              1377: set global #92="immutable_array"
-              1380: drop
-              1381: get global #92="immutable_array"
-              1384: constant #46=10
-              1387: constant #31=42
-              1390: call function 2
-              1392: set global #93="iarr"
-              1395: drop
-              1396: get global #93="iarr"
-              1399: constant #39=0
-              1402: constant #94=6
-              1405: call method #53="set" 3
-              1409: drop
-              1410: get global #93="iarr"
-              1413: print #3="~\n" 1
+              1130: get global #81="result"
+              1133: print #3="~\n" 1
+              1137: drop
+              1138: get global #79="left"
+              1141: get global #80="right"
+              1144: call method #2="+" 2
+              1148: print #3="~\n" 1
+              1152: drop
+              1153: constant #15=false
+              1156: constant #21=2
+              1159: constant #21=2
+              1162: call method #5="*" 2
+              1166: constant #21=2
+              1169: constant #21=2
+              1172: call method #6="/" 2
+              1176: call method #2="+" 2
+              1180: constant #82=8
+              1183: constant #22=3
+              1186: call method #4="-" 2
+              1190: call method #12="==" 2
+              1194: constant #14=true
+              1197: call method #16="&" 2
+              1201: call method #17="|" 2
+              1205: print #3="~\n" 1
+              1209: drop
+              1210: constant #15=false
+              1213: constant #21=2
+              1216: constant #21=2
+              1219: call method #5="*" 2
+              1223: constant #21=2
+              1226: constant #21=2
+              1229: call method #6="/" 2
+              1233: call method #2="+" 2
+              1237: constant #82=8
+              1240: constant #22=3
+              1243: call method #4="-" 2
+              1247: call method #12="==" 2
+              1251: constant #14=true
+              1254: call method #16="&" 2
+              1258: call method #17="|" 2
+              1262: print #3="~\n" 1
+              1266: drop
+              1267: constant #20=1
+              1270: constant #18=null
+              1273: array
+              1274: set global #83="arr"
+              1277: drop
+              1278: get global #83="arr"
+              1281: constant #39=0
+              1284: constant #14=true
+              1287: call method #53="set" 3
+              1291: drop
+              1292: get global #83="arr"
+              1295: constant #39=0
+              1298: call method #55="get" 2
+              1302: print #3="~\n" 1
+              1306: drop
+              1307: get global #83="arr"
+              1310: constant #39=0
+              1313: constant #15=false
+              1316: call method #53="set" 3
+              1320: drop
+              1321: get global #83="arr"
+              1324: constant #39=0
+              1327: call method #55="get" 2
+              1331: drop
+              1332: get global #83="arr"
+              1335: constant #39=0
+              1338: call method #55="get" 2
+              1342: print #3="~\n" 1
+              1346: drop
+              1347: constant #20=1
+              1350: object #84
+              1353: set global #85="pseudo_one"
+              1356: drop
+              1357: constant #21=2
+              1360: object #86
+              1363: set global #87="pseudo_two"
+              1366: drop
+              1367: constant #20=1
+              1370: constant #21=2
+              1373: call method #2="+" 2
+              1377: print #3="~\n" 1
+              1381: drop
+              1382: function #91
+              1385: set global #92="immutable_array"
+              1388: drop
+              1389: get global #92="immutable_array"
+              1392: constant #46=10
+              1395: constant #31=42
+              1398: call function 2
+              1400: set global #93="iarr"
+              1403: drop
+              1404: get global #93="iarr"
+              1407: constant #39=0
+              1410: constant #94=6
+              1413: call method #53="set" 3
               1417: drop
-              1418: function #98
-              1421: set global #99="math_array"
-              1424: drop
-              1425: get global #99="math_array"
-              1428: constant #46=10
-              1431: constant #0=5
-              1434: call function 2
-              1436: set global #100="arr1"
-              1439: drop
-              1440: get global #100="arr1"
-              1443: constant #20=1
-              1446: call method #2="+" 2
-              1450: set global #101="arr2"
-              1453: drop
-              1454: get global #101="arr2"
-              1457: constant #39=0
-              1460: constant #1=7
-              1463: call method #53="set" 3
-              1467: drop
-              1468: get global #101="arr2"
-              1471: print #3="~\n" 1
-              1475: return
+              1418: get global #93="iarr"
+              1421: print #3="~\n" 1
+              1425: drop
+              1426: function #98
+              1429: set global #99="math_array"
+              1432: drop
+              1433: get global #99="math_array"
+              1436: constant #46=10
+              1439: constant #0=5
+              1442: call function 2
+              1444: set global #100="arr1"
+              1447: drop
+              1448: get global #100="arr1"
+              1451: constant #20=1
+              1454: call method #2="+" 2
+              1458: set global #101="arr2"
+              1461: drop
+              1462: get global #101="arr2"
+              1465: constant #39=0
+              1468: constant #1=7
+              1471: call method #53="set" 3
+              1475: drop
+              1476: get global #101="arr2"
+              1479: print #3="~\n" 1
+              1483: return
 Entry: #102
 Globals: #25="xb", #26="xa", #28="xbb", #29="xaa", #30="answer", #32="s", #33="x", #34="y", #37="p", #38="q", #40="r", #42="x_", #43="y_", #44="z_", #45="i", #48="f", #49="e", #50="size", #52="j", #54="a", #59="b", #60="c", #63="fa", #64="d", #73="point", #75="new", #79="left", #80="right", #81="result", #83="arr", #85="pseudo_one", #87="pseudo_two", #92="immutable_array", #93="iarr", #99="math_array", #100="arr1", #101="arr2"
 
@@ -758,7 +761,8 @@ Globals: #25="xb", #26="xa", #28="xbb", #29="xaa", #30="answer", #32="s", #33="x
 // > true
 // > null
 // > true
-// > true
+// > null
+// > null
 // > 0
 // > 1
 // > 2
