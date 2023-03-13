@@ -83,6 +83,8 @@ function run_test {
     type=$2   # e.g. "run_ast"
     test=${3%%.*} # e.g. "arrays" or "arrays.fml" or "arrays.bc.txt"
 
+    require_fml
+
     # Create dir or die
     mkdir -p "$OUTPUT_DIR/$type/" || die "failed to create output dir"
 
@@ -158,17 +160,18 @@ function run_tests {
 fml=$(with_default "$FML" "./fml")
 fml_ref_bc_int=$(with_default "$FML_REF_BC_INT" "$fml")
 
-which "$fml" 2>/dev/null 1>/dev/null # execute which just for the result
-if (( $? != 0 ))
-then
-    echo "Cannot find interpreter at path: \"$fml\"." >&2
-    echo "Provide a path to an FML interpreter via the environmental variable FML, eg:" >&2
-    echo >&2
-    echo "    export FML=/path/to/interpreter/fml" >&2
-    echo "    ./suite $@" >&2
-    echo >&2
-    exit 1
-fi
+function require_fml {
+    if ! command -v "$fml" 2>/dev/null 1>/dev/null
+    then
+        echo "Cannot find interpreter at path: \"$fml\"." >&2
+        echo "Provide a path to an FML interpreter via the environmental variable FML, eg:" >&2
+        echo >&2
+        echo "    export FML=/path/to/interpreter/fml" >&2
+        echo "    ./suite ..." >&2
+        echo >&2
+        exit 1
+    fi
+}
 
 test_type=$1
 shift
