@@ -48,9 +48,9 @@ For example, given `FML=/path/to/interpreter/fml`, the following commands will r
 # /path/to/interpreter/fml bc_interpret output/bc_compile/hello_world.bc
 ```
 
-Compilation tests can also use a specific bytecode interpreter by setting `FML_REF_BC_INT`. You usually want to set `FML_REF_BC_INT` as the reference interpreter to catch differences against the spec, but you can also test against your own interpreter (which is the default).
+Compilation tests can also use a specific bytecode interpreter by setting `FML_REF`. You usually want to set `FML_REF` as the reference interpreter to catch differences against the spec, but you can also test against your own interpreter (which is the default).
 
-If the reference interpreter is configured as `FML_REF_BC_INT=/path/to/reference/interpreter/fml` the following command will run the following interpreter commands:
+If the reference interpreter is configured as `FML_REF=/path/to/reference/interpreter/fml` the following command will run the following interpreter commands:
 
 ```bash
 ./suite bc_compile hello_world
@@ -106,7 +106,7 @@ Analogously, multiple tests:
 Before executing compilation tests, configure reference bytecode interpreter via environemtnal variable (if other than FML):
 
 ```bash
-FML_REF_BC_INT=/path/to/interpreter/fml
+FML_REF=/path/to/interpreter/fml
 ```
 
 A single bytecode compiler test:
