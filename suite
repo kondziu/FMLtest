@@ -85,6 +85,10 @@ function bc_compile {
     "$fml_ref" bc_interpret "$compiled_bytecode"
 }
 
+function run {
+    "$fml" run "$input"
+}
+
 function run_test {
     format=$1 # "fml" or "bc"
     type=$2   # e.g. "run_ast"
@@ -143,7 +147,8 @@ function get_extension {
         bc_interpret) extension=bc ;;
         bc_interpret_fml) extension=fml ;;
         bc_compile) extension=fml ;;
-        *) die "Unknown test type '$1'. Available test types: ast_interpret, bc_interpret, bc_compile." ;;
+        run) extension=fml ;;
+        *) die "Unknown test type '$1'. Available test types: ast_interpret, bc_interpret, bc_compile, run." ;;
     esac
 }
 
@@ -190,7 +195,7 @@ show)
     (( ${#tests[@]} > 0 )) && printf '%s\n' "${tests[@]}"
     ;;
 all)
-    for suite in ast_interpret bc_interpret bc_interpret_fml bc_compile; do
+    for suite in ast_interpret bc_interpret bc_interpret_fml bc_compile run; do
         run_tests "$suite"
     done
     ;;
