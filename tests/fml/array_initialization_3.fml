@@ -1,0 +1,5 @@
+// > size
+array(begin print("size\n"); 2 end, 1);
+
+// > size
+array(begin print("size\n"); 2 end, 1 + 1);
