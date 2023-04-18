@@ -1,0 +1,10 @@
+begin
+    object
+    // > parent
+    extends print("parent\n")
+    begin
+        // > a
+        let a = print("a\n");
+    end;
+    5;
+end
